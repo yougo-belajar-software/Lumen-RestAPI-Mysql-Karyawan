@@ -13,31 +13,12 @@
 
 // php -S localhost:8000 -t public
 
-$router->group(['prefix' => 'api'], function () use ($router) {
-    $router->get('/', function() {
-        return response()->json(['status' => 200, 'message' => 'Hello World from Lumen RESTful API']);
-    });
-    
-    $router->post('movie', 'MovieController@create');
-    $router->get('movie/{id}/review', 'MovieController@showReview');
-    $router->get('movie/{id}', 'MovieController@showOne');
-    $router->get('movie', 'MovieController@showAll');
-    $router->put('movie/{id}', 'MovieController@update');
-    $router->delete('movie/{id}', 'MovieController@delete');
-
-    $router->post('review', 'ReviewController@create');
-    $router->get('review/{id}', 'ReviewController@showOne');
-    $router->get('review', 'ReviewController@showAll');
-    $router->put('review/{id}', 'ReviewController@update');
-    $router->delete('review/{id}', 'ReviewController@delete');
-
-    $router->post('signup', 'UserController@signup');
-    $router->post('signin', 'UserController@signin');
-    $router->get('user/{id}', 'UserController@show');
-    $router->put('user/{id}', 'UserController@update');
-    $router->delete('user/{id}', 'UserController@delete');
+$router->get('/', function() {
+    return response()->json(['status' => 200, 'message' => 'Hello World from Lumen RESTful API']);
 });
 
-$router->get('/', function () use ($router) {
-    return $router->app->version();
-});
+$router->post('karyawan', 'KaryawanController@create');
+$router->get('karyawan/{id}', 'KaryawanController@showOne');
+$router->get('karyawan', 'KaryawanController@showAll');
+$router->put('karyawan/{id}', 'KaryawanController@update');
+$router->delete('karyawan/{id}', 'KaryawanController@delete');
