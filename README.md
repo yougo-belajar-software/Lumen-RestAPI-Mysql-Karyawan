@@ -7,17 +7,15 @@ Really Simple RESTful API using Lumen.
 
 ## Endpoints
 1. Karyawan
-   - **GET** All
+   - **GET** Tampilkan semua karyawan
      > http://localhost:port/karyawan
-   - **GET** Specific
+   - **GET** Tampilkan Karyawan dengan spesifik ID
      > http://localhost:port/karyawan/{id}
-   - **GET** Review
-     > http://localhost:port/karyawan/{id}/review
-   - **POST**
+   - **POST** Tambah Karyawan Baru (_id, nama, email, gender, lamaKerja)
      > http://localhost:port/karyawan
-   - **PUT**
+   - **PUT** Update Data Karyawan dengan body (_id, nama, email, gender, lamaKerja)
      > http://localhost:port/karyawan/{id}
-   - **DELETE**
+   - **DELETE** Hapus Data Karyawan dengan spesifik Id
      > http://localhost:port/karyawan/{id}
      
 ## How to Use
