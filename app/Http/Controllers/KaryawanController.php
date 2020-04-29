@@ -5,11 +5,12 @@ namespace App\Http\Controllers;
 use App\Karyawan;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Str;
 
 class KaryawanController extends Controller
 {
     public function create(Request $request) {
-        $Karyawan = Karyawan::create($request->all());
+        $Karyawan = Karyawan::create(array_merge($request->all(),['_id'=>Str::random(20)]));
         $res['status'] = 201;
         $res['message'] = 'Created';
         $res['result'] = $Karyawan;
