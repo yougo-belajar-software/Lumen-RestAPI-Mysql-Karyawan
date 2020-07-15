@@ -25,4 +25,4 @@ Really Simple RESTful API using Lumen.
 4. Run migration `php artisan migrate`.
 5. Run migration `php artisan db:seed`.
 6. Run server `php -S localhost:8000 -t public`.
-7. Do-what-you-want-with-it!
+7. Do-what-you-want-with-it! 
